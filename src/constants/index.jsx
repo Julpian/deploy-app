@@ -35,15 +35,15 @@ export const certifications = [
     image: ds,
     title: "Associate Data Science",
     provider: "BNSP",
-    description: "Sertifikasi ini mengakui kompetensi dalam Data Science, mencakup analisis data, pemrograman, dan penerapan algoritma untuk menyelesaikan masalah. Diperoleh melalui pelatihan BNSP, sertifikasi ini mempersiapkan individu untuk mengelola dan memproses data besar guna mendukung keputusan berbasis data.",
+    description: "Sertifikasi ini mengakui kompetensi dalam Data Science, mencakup analisis data, pemrograman, dan penerapan algoritma untuk menyelesaikan masalah. Diperoleh melalui pelatihan BNSP.",
     link: "https://drive.google.com/file/d/1kxhIQ6BnoxCbqLfLnC_Rf4QiKax7H9In/view?usp=drive_link",
   },
   {
-    image: st,
-    title: "Sertifikat Pelatihan Data Science",
-    provider: "Digital Talent Scholarship",
-    description: "Pelatihan Data Science yang diselenggarakan oleh Kementerian Komunikasi dan Informatika, mencakup pemodelan, analisis, dan visualisasi data untuk menyelesaikan isu-isu dunia nyata.",
-    link: "https://drive.google.com/file/d/15pLqT0kf7VFHC_-S78N_1YpCBZndzxYp/view?usp=drive_link",
+    image: ts,
+    title: "Sertifikat Studi Independen Bersertifikat", 
+    provider: "MSIB Angkatan 6",
+    description: "Telah berhasil menyelesaikan tugas belajarnya bersama PT. GreatEdu Global Mahardika pada program Studi Independen Bersertifikat Angkatan 6 bertema Greenceleration dengan kegiatan Data Science Bootcamp.",
+    link: "https://drive.google.com/file/d/1WmjxDgNcJ80lgYfKGyNZvawUm999NUQu/view?usp=drive_link",
   },
   {
     image: kn,
@@ -60,12 +60,13 @@ export const certifications = [
     link: "https://drive.google.com/file/d/1vKU8fuRs8419-wuYF1-GxjkjZirRb0mV/view?usp=drive_link",
   },
   {
-    image: ts,
-    title: "Sertifikat Studi Independen Bersertifikat", 
-    provider: "MSIB Angkatan 6",
-    description: "Telah berhasil menyelesaikan tugas belajarnya bersama PT. GreatEdu Global Mahardika pada program Studi Independen Bersertifikat Angkatan 6 bertema Greenceleration dengan kegiatan Data Science Bootcamp.",
-    link: "https://drive.google.com/file/d/1WmjxDgNcJ80lgYfKGyNZvawUm999NUQu/view?usp=drive_link",
+    image: st,
+    title: "Data Science and AI Solutions for Real-World Issues",
+    provider: "Digital Talent Scholarship",
+    description: "Pelatihan Data Science yang diselenggarakan oleh Kementerian Komunikasi dan Informatika, mencakup pemodelan, analisis, dan visualisasi data untuk menyelesaikan isu-isu dunia nyata.",
+    link: "https://drive.google.com/file/d/15pLqT0kf7VFHC_-S78N_1YpCBZndzxYp/view?usp=drive_link",
   },
+
 ];
 
 export const internships = [

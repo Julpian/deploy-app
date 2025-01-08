@@ -1,24 +1,42 @@
 import React, { useState } from "react";
 import bri from "../assets/intership/bri.jpg";
+import bri1 from "../assets/intership/bri1.jpg";
 import kkn1 from "../assets/intership/kkn1.jpg";
 import kkn2 from "../assets/intership/kkn2.jpg";
 import kkn3 from "../assets/intership/kkn3.jpg";
 import bps from "../assets/intership/bps.jpg";
 import bps1 from "../assets/intership/bps1.jpg";
 import bps2 from "../assets/intership/bps2.jpg";
+import ge1 from "../assets/intership/ge1.png";
+import ge2 from "../assets/intership/ge2.png";
+import ge3 from "../assets/intership/ge3.png";
+import pen from "../assets/intership/pendidikan.jpg";
+import pen1 from "../assets/intership/pendidikan1.jpg";
+import doc1 from "../assets/intership/doc1.png";
+import doc2 from "../assets/intership/doc2.jpg";
 import briLogo from "../assets/bri.png"; // Logo perusahaan
 import kknLogo from "../assets/kkn.png";
 import greatEduLogo from "../assets/greatedu.png";
 import bpsLogo from "../assets/bps.jpeg";
+import hmif from "../assets/hmif.png";
 
 const internships = [
+  {
+    company: "Himpunan Mahasiswa Informatika (HMIF) Universitas Siliwangi",
+    position: "Ketua Divisi Pendidikan",
+    period: "Desember 2022 - November 2023",
+    description:
+      "Divisi Pendidikan bertugas memfasilitasi pengembangan wawasan, keterampilan, dan potensi mahasiswa, menjalin kolaborasi dengan lembaga pendidikan, serta mendukung lomba, delegasi, karya ilmiah, dan diskusi di bidang Informatika.",
+    documentation: [pen, pen1],
+    logo: hmif, // Tambahkan logo
+  },
   {
     company: "BRI",
     position: "Document Control Intern",
     period: "Juni 2023 - Agustus 2023",
     description:
       "Fokus pada pengelolaan dokumen terkait peminjaman, baik yang sudah selesai maupun yang masih berjalan, serta memastikan bukti dan administrasi pinjaman tersimpan dengan baik.",
-    documentation: [bri],
+    documentation: [bri, bri1],
     logo: briLogo, // Tambahkan logo
   },
   {
@@ -31,12 +49,21 @@ const internships = [
     logo: kknLogo,
   },
   {
+    company: "Himpunan Mahasiswa Informatika (HMIF) Universitas Siliwangi",
+    position: "Kepala Departemen Pendidikan",
+    period: "Desember 2023 - November 2024",
+    description:
+      "Kepala Departemen Pendidikan bertugas mengoordinasikan divisi Pendidikan, Risbantek, dan Pengabdian Masyarakat untuk memastikan program kerja sesuai visi, mendukung pengembangan mahasiswa, inovasi teknologi, dan pengabdian masyarakat, serta menjalin hubungan strategis internal dan eksternal.",
+    documentation: [doc1, doc2],
+    logo: hmif, // Tambahkan logo
+  },
+  {
     company: "GreatEdu Global Mahardika",
     position: "Data Science Bootcamp Participant",
     period: "Feb 2024 - Jun 2024",
     description:
       "Selesai mengikuti bootcamp data science yang komprehensif, yang berfokus pada proyek-proyek dunia nyata yang melibatkan pemodelan prediktif dan visualisasi data menggunakan Python.",
-    documentation: [bri],
+    documentation: [ge1, ge2, ge3],
     logo: greatEduLogo,
   },
   {
