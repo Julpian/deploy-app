@@ -33,7 +33,7 @@ const HeroSection = () => {
   }, [charIndex, textIndex, isTyping]);
 
   return (
-    <div className="flex flex-col items-center justify-center lg:mt-20 mt-6 px-6 space-y-8">
+    <div id= "Home" className="flex flex-col items-center justify-center lg:mt-20 mt-6 px-6 space-y-8">
       {/* Foto Profil dengan Animasi */}
       <div className="relative flex-shrink-0 animate__animated animate__fadeIn animate__delay-1s">
         <div className="w-56 h-56 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-green-500 p-1 transform transition-transform duration-500 ease-in-out hover:scale-110 hover:shadow-xl">

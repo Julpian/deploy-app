@@ -3,9 +3,9 @@ import { projects } from "../constants";
 const Projects = () => {
   return (
     <section className="relative mt-20 bg-neutral-900 text-white py-20">
-      <div className="text-center">
-        <span className="bg-neutral-800 text-green-500 rounded-full h-6 text-sm font-medium px-3 py-1 uppercase">
-          My Projects
+      <div id= "project" className="text-center">
+      <span className="bg-gradient-to-r from-purple-500 via-pink-500 to-green-500 text-white rounded-full h-6 text-sm font-medium px-2 py-1 uppercase">
+          MY Project
         </span>
         <h2 className="text-3xl sm:text-5xl lg:text-6xl mt-6 tracking-wide">
           Explore{" "}

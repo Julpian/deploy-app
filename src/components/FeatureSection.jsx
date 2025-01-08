@@ -62,10 +62,10 @@ const ExperienceSection = () => {
   };
 
   return (
-    <div className="relative mt-20 border-b border-neutral-800 min-h-[800px]">
+    <div id= "experience" className="relative mt-20 border-b border-neutral-800 min-h-[800px]">
       <div className="text-center">
         <span className="bg-gradient-to-r from-purple-500 via-pink-500 to-green-500 text-white rounded-full h-6 text-sm font-medium px-2 py-1 uppercase">
-          Internship Experience
+          MY Experience
         </span>
         <h2 className="text-3xl sm:text-5xl lg:text-6xl mt-10 lg:mt-20 tracking-wide">
           Explore{" "}

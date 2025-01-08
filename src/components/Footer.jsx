@@ -5,7 +5,7 @@ const Footer = () => {
         {/* Social Media Links */}
         <div className="flex space-x-6">
           <a
-            href="https://github.com"
+            href="https://github.com/Julpian"
             target="_blank"
             rel="noopener noreferrer"
             className="text-neutral-300 hover:text-white"
@@ -13,7 +13,7 @@ const Footer = () => {
             GitHub
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/lutfi-julpian-ba764a22a/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-neutral-300 hover:text-white"
@@ -21,7 +21,7 @@ const Footer = () => {
             LinkedIn
           </a>
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/ljulpian/?hl=en"
             target="_blank"
             rel="noopener noreferrer"
             className="text-neutral-300 hover:text-white"
@@ -29,7 +29,7 @@ const Footer = () => {
             Instagram
           </a>
           <a
-            href="https://facebook.com"
+            href="https://www.facebook.com/lutfijulpian"
             target="_blank"
             rel="noopener noreferrer"
             className="text-neutral-300 hover:text-white"
@@ -37,7 +37,7 @@ const Footer = () => {
             Facebook
           </a>
           <a
-            href="mailto:youremail@example.com"
+            href="lutfijulpian@gmail.com"
             className="text-neutral-300 hover:text-white"
           >
             Gmail
@@ -46,7 +46,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <p className="text-neutral-400 text-sm">
-          © {new Date().getFullYear()} YourCompanyName. All rights reserved.
+          © {new Date().getFullYear()} Lutfi Julpian. All rights reserved.
         </p>
       </div>
     </footer>
