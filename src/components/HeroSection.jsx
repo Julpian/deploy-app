@@ -12,6 +12,10 @@ import numpyIcon from "../assets/icon/numpy.png";
 import pandasIcon from "../assets/icon/pandas.png";
 import streamlitIcon from "../assets/icon/streamlit.png";
 import tensorflowIcon from "../assets/icon/tensorflow.png";
+import canvaIcon from "../assets/icon/canva.png";
+import scikitlearnIcon from "../assets/icon/scikit-learn.png";
+import seabornIcon from "../assets/icon/seaborn.png";
+import tailwindIcon from "../assets/icon/tailwind.png";
 
 const HeroSection = () => {
   const texts = ["Data Science", "Data Analyst", "Data Engineer"];
@@ -113,6 +117,18 @@ const HeroSection = () => {
           </div>
           <div className="flex flex-col items-center transform transition-all duration-300 hover:scale-125 hover:shadow-xl">
             <img src={gitIcon} alt="Git" className="w-12 h-12 mb-2" />
+          </div>
+          <div className="flex flex-col items-center transform transition-all duration-300 hover:scale-125 hover:shadow-xl">
+            <img src={canvaIcon} alt="Git" className="w-12 h-12 mb-2" />
+          </div>
+          <div className="flex flex-col items-center transform transition-all duration-300 hover:scale-125 hover:shadow-xl">
+            <img src={scikitlearnIcon} alt="Git" className="w-12 h-12 mb-2" />
+          </div>
+          <div className="flex flex-col items-center transform transition-all duration-300 hover:scale-125 hover:shadow-xl">
+            <img src={seabornIcon} alt="Git" className="w-12 h-12 mb-2" />
+          </div>
+          <div className="flex flex-col items-center transform transition-all duration-300 hover:scale-125 hover:shadow-xl">
+            <img src={tailwindIcon} alt="Git" className="w-12 h-12 mb-2" />
           </div>
         </div>
       </div>

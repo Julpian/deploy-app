@@ -71,7 +71,7 @@ const internships = [
     position: "Survey Data Specialist Intern",
     period: "Juli 2024 - Agustus 2024",
     description:
-      "Tugas Anda yang melibatkan pembuatan form untuk survei, pengolahan data Excel untuk membuatnya rapi, serta melakukan prediksi harga beras menunjukkan keterlibatan dalam analisis dan pengolahan data yang dapat dimanfaatkan untuk perencanaan atau pelaporan.",
+      "Tugas yang melibatkan pembuatan form survei untuk pengumpulan data, pengolahan data Excel agar lebih rapi, serta prediksi harga beras, menunjukkan keterlibatan dalam analisis dan pengolahan data. Hasil dari pekerjaan ini dapat dimanfaatkan untuk perencanaan, pengambilan keputusan, atau pembuatan laporan yang lebih terstruktur dan informatif.",
     documentation: [bps, bps1, bps2],
     logo: bpsLogo,
   },
