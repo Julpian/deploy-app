@@ -8,3 +8,81 @@
   font-family: "Poppins", sans-serif;
   color-scheme: dark;
 }
+
+body {
+  background-color: #000000; /* Latar belakang lebih gelap, hitam pekat */
+  color: #e5e5e5; /* Warna teks terang untuk kontras */
+}
+
+button {
+  background-color: #e50914; /* Merah Netflix */
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #b81d1d; /* Merah yang lebih gelap saat hover */
+}
+
+a {
+  color: #e5e5e5;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #e50914; /* Merah Netflix saat hover */
+}
+
+/* Penyesuaian untuk heading agar lebih terang */
+h1, h2, h3, h4, h5, h6 {
+  color: white;
+}
+
+/* Teks konten dengan warna lebih lembut */
+p, span {
+  color: #b3b3b3; /* Teks yang sedikit lebih terang */
+}
+
+/* Efek saat hover pada elemen */
+a:hover, button:hover {
+  color: #e50914; /* Warna merah Netflix untuk elemen saat hover */
+  text-decoration: underline;
+}
+
+/* Penyesuaian untuk card atau elemen lainnya */
+.card, .section {
+  background-color: #1a1a1a; /* Card lebih gelap daripada latar belakang */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+.card h3, .section h3 {
+  color: white;
+}
+
+.card p, .section p {
+  color: #ccc; /* Warna teks sedikit lebih terang untuk konten */
+}
+
+input, textarea {
+  background-color: #333; /* Input dengan latar belakang gelap */
+  color: white;
+  border: 1px solid #444; /* Border input lebih terang */
+}
+
+/* Menambah kontras pada tombol action */
+button.action {
+  background-color: #e50914; /* Merah Netflix */
+  color: white;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: bold;
+}
+
+button.action:hover {
+  background-color: #b81d1d; /* Merah lebih gelap saat hover */
+}
