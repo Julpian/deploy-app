@@ -60,7 +60,7 @@ const internships = [
   {
     company: "Bandan Pusat Statistic (BPS)",
     position: "Survey Data Specialist Intern",
-    period: "Juli 2024 - Agustus 2024",
+    period: "Agustus 2024 - September 2024",
     description:
       "Tugas yang melibatkan pembuatan form survei untuk pengumpulan data, pengolahan data Excel agar lebih rapi, serta prediksi harga beras, menunjukkan keterlibatan dalam analisis dan pengolahan data.",
     documentation: [bps, bps1, bps2],
