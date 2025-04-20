@@ -84,7 +84,7 @@ const HeroSection = () => {
         {/* Bagian Foto Profil */}
         <div className="lg:w-1/2 flex justify-center animate__animated animate__fadeIn animate__delay-1s">
           <img
-            src={lj}
+            src={jl}
             alt="Lutfi Julpian"
             className="w-96 h-96 rounded-full object-contain shadow-lg transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-2xl"
           />
