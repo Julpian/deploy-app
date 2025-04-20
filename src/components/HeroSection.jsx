@@ -61,11 +61,11 @@ const HeroSection = () => {
             </span>
           </h1>
           <p className="text-lg text-neutral-400 max-w-2xl mx-auto lg:mx-0">
-            Saya Lutfi Julpian, seorang profesional yang bersemangat dalam mengolah data untuk menciptakan visualisasi yang efektif dan informatif. Dengan keahlian di bidang Data Science, Data Analysis, dan Data Engineering, saya dapat memberikan wawasan yang mendalam untuk pengambilan keputusan yang lebih cerdas.
+            I am Lutfi Julpian, a professional who is very enthusiastic in processing data to create effective and informative visualizations. With expertise in Data Science, Data Analytics, and Data Engineering, I can provide deep insights for smarter decision making.
           </p>
 
           <p className="text-lg text-neutral-400 mt-4">
-            Keahlian saya dalam bidang{" "}
+            My expertise is in the field of{" "}
             <span className="font-bold text-red-600">{currentText}</span>
           </p>
 
