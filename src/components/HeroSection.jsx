@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import profilePhoto from "../assets/julpian.jpg";
 import lj from "../assets/lj.png";
+import lj from "../assets/jl.png";
 import pythonIcon from "../assets/icon/python.png";
 import phpIcon from "../assets/icon/php.png";
 import jsIcon from "../assets/icon/java-script.png";
