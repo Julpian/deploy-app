@@ -22,47 +22,47 @@ import hmif from "../assets/hmif.png";
 
 const internships = [
   {
-    company: "Himpunan Mahasiswa Informatika (HMIF) Universitas Siliwangi",
-    position: "Ketua Divisi Pendidikan",
+    company: "Himpunan Mahasiswa Informatika (HMIF) Siliwangi University",
+    position: "Head of Education Division",
     period: "Desember 2022 - November 2023",
     description:
-      "Divisi Pendidikan bertugas memfasilitasi pengembangan wawasan, keterampilan, dan potensi mahasiswa, menjalin kolaborasi dengan lembaga pendidikan, serta mendukung lomba, delegasi, karya ilmiah, dan diskusi di bidang Informatika.",
+      "The Education Division is tasked with facilitating the development of student insights, skills, and potential, collaborating with educational institutions, and supporting competitions, delegations, scientific papers, and discussions in the field of Informatics.",
     documentation: [pen, pen1],
     logo: hmif,
   },
   {
     company: "BRI",
     position: "Document Control Intern",
-    period: "Juni 2023 - Agustus 2023",
+    period: "June 2023 - August 2023",
     description:
-      "Fokus pada pengelolaan dokumen terkait peminjaman, baik yang sudah selesai maupun yang masih berjalan, serta memastikan bukti dan administrasi pinjaman tersimpan dengan baik.",
+      "Focus on managing loan-related documents, both completed and ongoing, as well as ensuring that proof and loan administration are properly stored.",
     documentation: [bri, bri1],
     logo: briLogo,
   },
   {
-    company: "Kuliah Kerja Nyata (KKN) Desa Margacinta",
-    position: "Wakil Sekretaris",
-    period: "Desember 2023 - 5 Februari 2024",
+    company: "Kuliah Kerja Nyata (KKN) Margacinta Village",
+    position: "Deputy Secretary",
+    period: "December 2023 - February 2024",
     description:
-      "Fokus pada pengelolaan dokumen surat undangan kepada kepala desa dan tokoh penting di desa serta membuat laporan harian dari kegiatan.",
+      "Focus on managing invitation letter documents to village heads and important figures in the village and making daily reports of activities.",
     documentation: [kkn1, kkn2, kkn3],
     logo: kknLogo,
   },
   {
     company: "GreatEdu Global Mahardika",
     position: "Data Science Bootcamp Participant",
-    period: "Feb 2024 - Jun 2024",
+    period: "February 2024 - June 2024",
     description:
-      "Selesai mengikuti bootcamp data science yang komprehensif, yang berfokus pada proyek-proyek dunia nyata yang melibatkan pemodelan prediktif dan visualisasi data menggunakan Python.",
+      "Completed a comprehensive data science bootcamp, which focuses on real-world projects involving predictive modeling and data visualization using Python.",
     documentation: [ge1, ge2, ge3],
     logo: greatEduLogo,
   },
   {
     company: "Bandan Pusat Statistic (BPS)",
     position: "Survey Data Specialist Intern",
-    period: "Agustus 2024 - September 2024",
+    period: "August 2024 - September 2024",
     description:
-      "Tugas yang melibatkan pembuatan form survei untuk pengumpulan data, pengolahan data Excel agar lebih rapi, serta prediksi harga beras, menunjukkan keterlibatan dalam analisis dan pengolahan data.",
+      "Tasks involving the creation of survey forms for data collection, processing Excel data to make it neater, and rice price prediction, show involvement in data analysis and processing.",
     documentation: [bps, bps1, bps2],
     logo: bpsLogo,
   },
