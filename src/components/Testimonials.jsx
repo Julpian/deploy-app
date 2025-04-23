@@ -1,43 +1,77 @@
 import { certifications } from "../constants";
 
+// Komponen Header Sertifikasi
+const CertificationHeader = () => (
+  <h2 className="text-2xl sm:text-3xl lg:text-4xl text-center my-8 sm:my-12 lg:my-16 text-white font-bold tracking-tight">
+    Certifications
+  </h2>
+);
+
+// Komponen Kartu Sertifikasi
+const CertificationCard = ({ certification, index }) => (
+  <div
+    className="w-full px-3 py-3 animate-fadeIn"
+    style={{ animationDelay: `${index * 100}ms` }}
+    role="article"
+    aria-labelledby={`certification-title-${index}`}
+  >
+    <div className="bg-[#1a1a1a] rounded-xl p-5 border border-neutral-700 hover:scale-105 hover:shadow-2xl transition-all duration-300">
+      <img
+        className="w-full h-32 sm:h-40 object-cover rounded-md mb-4"
+        src={certification.image}
+        alt={certification.title}
+        loading="lazy"
+      />
+      <h3
+        id={`certification-title-${index}`}
+        className="text-base sm:text-lg font-semibold text-white mb-1"
+      >
+        {certification.title}
+      </h3>
+      <p className="text-sm italic text-neutral-400 mb-3">
+        {certification.provider}
+      </p>
+      <p className="text-sm text-neutral-300 line-clamp-3">
+        {certification.description}
+      </p>
+      <a
+        href={certification.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-4 inline-block bg-gradient-to-r from-red-600 to-red-800 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-gradient-to-r hover:from-red-700 hover:to-red-900 transition-all duration-300"
+        aria-label={`Lihat detail sertifikasi ${certification.title}`}
+      >
+        Lihat Detail
+      </a>
+    </div>
+  </div>
+);
+
 const Certifications = () => {
   return (
-    <div id="sertifikat" className="mt-20 tracking-wide">
-      <h2 className="text-3xl sm:text-5xl lg:text-6xl text-center my-10 lg:my-20 text-white">
-        Certifications
-      </h2>
-      <div className="flex flex-wrap justify-center">
-        {certifications.map((certification, index) => (
-          <div
-            key={index}
-            className="w-full sm:w-1/2 lg:w-1/3 px-4 py-4 opacity-0 animate-fadeIn transition-opacity duration-1000"
-          >
-            <div className="bg-[#141414] rounded-lg p-6 text-md border border-neutral-800 hover:scale-105 hover:shadow-xl transition-all duration-300">
-              <img
-                className="w-full h-40 object-cover rounded-md mb-4"
-                src={certification.image}
-                alt={certification.title}
+    <section
+      id="sertifikasi"
+      className="bg-black text-white py-12 sm:py-16"
+    >
+      <div className="container mx-auto px-4 sm:px-6">
+        <CertificationHeader />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {certifications.length > 0 ? (
+            certifications.map((certification, index) => (
+              <CertificationCard
+                key={index}
+                certification={certification}
+                index={index}
               />
-              <h3 className="text-lg font-semibold text-white">{certification.title}</h3>
-              <p className="text-sm italic text-neutral-400">
-                {certification.provider}
-              </p>
-              <p className="mt-4 text-sm text-neutral-300">
-                {certification.description}
-              </p>
-              <a
-                href={certification.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-4 inline-block bg-gradient-to-r from-red-600 to-red-800 text-white px-4 py-2 rounded-md hover:bg-gradient-to-r hover:from-red-700 hover:to-red-900 transition duration-300"
-              >
-                Lihat Detail
-              </a>
-            </div>
-          </div>
-        ))}
+            ))
+          ) : (
+            <p className="text-center text-neutral-400 col-span-full">
+              Belum ada sertifikasi yang tersedia.
+            </p>
+          )}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

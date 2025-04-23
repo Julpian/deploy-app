@@ -12,8 +12,6 @@ import ge2 from "../assets/intership/ge2.png";
 import ge3 from "../assets/intership/ge3.png";
 import pen from "../assets/intership/pendidikan.jpg";
 import pen1 from "../assets/intership/pendidikan1.jpg";
-import doc1 from "../assets/intership/doc1.png";
-import doc2 from "../assets/intership/doc2.jpg";
 import briLogo from "../assets/bri.png";
 import kknLogo from "../assets/kkn.png";
 import greatEduLogo from "../assets/greatedu.png";
@@ -24,45 +22,45 @@ const internships = [
   {
     company: "Himpunan Mahasiswa Informatika (HMIF) Siliwangi University",
     position: "Head of Education Division",
-    period: "Desember 2022 - November 2023",
+    period: "Dec 2022 - Nov 2023",
     description:
-      "The Education Division is tasked with facilitating the development of student insights, skills, and potential, collaborating with educational institutions, and supporting competitions, delegations, scientific papers, and discussions in the field of Informatics.",
+      "Facilitated student development in skills and insights, collaborated with educational institutions, and supported competitions, delegations, and scientific discussions in Informatics.",
     documentation: [pen, pen1],
     logo: hmif,
   },
   {
     company: "BRI",
     position: "Document Control Intern",
-    period: "June 2023 - August 2023",
+    period: "Jun 2023 - Aug 2023",
     description:
-      "Focus on managing loan-related documents, both completed and ongoing, as well as ensuring that proof and loan administration are properly stored.",
+      "Managed loan-related documents, ensuring proper storage and administration of proofs and ongoing loans.",
     documentation: [bri, bri1],
     logo: briLogo,
   },
   {
     company: "Kuliah Kerja Nyata (KKN) Margacinta Village",
     position: "Deputy Secretary",
-    period: "December 2023 - February 2024",
+    period: "Dec 2023 - Feb 2024",
     description:
-      "Focus on managing invitation letter documents to village heads and important figures in the village and making daily reports of activities.",
+      "Managed invitation letters to village heads and key figures, and compiled daily activity reports.",
     documentation: [kkn1, kkn2, kkn3],
     logo: kknLogo,
   },
   {
     company: "GreatEdu Global Mahardika",
     position: "Data Science Bootcamp Participant",
-    period: "February 2024 - June 2024",
+    period: "Feb 2024 - Jun 2024",
     description:
-      "Completed a comprehensive data science bootcamp, which focuses on real-world projects involving predictive modeling and data visualization using Python.",
+      "Completed a data science bootcamp focusing on predictive modeling and data visualization using Python.",
     documentation: [ge1, ge2, ge3],
     logo: greatEduLogo,
   },
   {
-    company: "Bandan Pusat Statistic (BPS)",
+    company: "Badan Pusat Statistik (BPS)",
     position: "Survey Data Specialist Intern",
-    period: "August 2024 - September 2024",
+    period: "Aug 2024 - Sep 2024",
     description:
-      "Tasks involving the creation of survey forms for data collection, processing Excel data to make it neater, and rice price prediction, show involvement in data analysis and processing.",
+      "Created survey forms, processed Excel data for clarity, and performed rice price predictions.",
     documentation: [bps, bps1, bps2],
     logo: bpsLogo,
   },
@@ -70,84 +68,134 @@ const internships = [
 
 const ExperienceSection = () => {
   const [selectedInternship, setSelectedInternship] = useState(null);
+  const [carouselIndex, setCarouselIndex] = useState(0);
 
   const handleOpenModal = (internship) => {
     setSelectedInternship(internship);
+    setCarouselIndex(0);
   };
 
   const handleCloseModal = () => {
     setSelectedInternship(null);
   };
 
+  const nextSlide = () => {
+    if (selectedInternship) {
+      setCarouselIndex((prev) => (prev + 1) % selectedInternship.documentation.length);
+    }
+  };
+
+  const prevSlide = () => {
+    if (selectedInternship) {
+      setCarouselIndex((prev) =>
+        prev === 0 ? selectedInternship.documentation.length - 1 : prev - 1
+      );
+    }
+  };
+
   return (
-    <div id="experience" className="relative mt-20 border-b border-neutral-800 min-h-[800px]">
-      <div className="text-center">
-        <span className="bg-gradient-to-r from-red-600 via-red-500 to-red-500 text-white rounded-full h-6 text-sm font-medium px-3 py-1 uppercase">
+    <section
+      id="experience"
+      className="relative mt-16 border-b border-neutral-800 min-h-[600px] px-4 sm:px-6 lg:px-8 py-12"
+    >
+      {/* Header */}
+      <div className="text-center space-y-3">
+        <span className="inline-block bg-gradient-to-r from-red-600 via-red-500 to-red-500 text-white rounded-full text-xs sm:text-sm font-medium px-4 py-1 uppercase">
           My Experience
         </span>
-        <h2 className="text-3xl sm:text-5xl lg:text-6xl mt-10 lg:mt-20 tracking-wide text-white">
+        <h2 className="text-2xl sm:text-4xl lg:text-5xl mt-6 sm:mt-10 font-bold tracking-tight text-white">
           Explore{" "}
           <span className="bg-gradient-to-r from-red-600 to-red-500 text-transparent bg-clip-text">
             My Journey
           </span>
         </h2>
       </div>
-      <div className="flex flex-wrap mt-10 lg:mt-20">
+
+      {/* Internship Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 sm:mt-16">
         {internships.map((internship, index) => (
           <div
             key={index}
-            className="w-full sm:w-1/2 lg:w-1/3 p-6 transition-transform transform hover:scale-105"
+            className="bg-neutral-900 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 relative group"
           >
-            <div className="flex flex-col bg-neutral-900 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 relative">
-              <img
-                src={internship.logo}
-                alt={`${internship.company} Logo`}
-                className="w-12 h-12 absolute top-4 right-4 rounded-full border border-neutral-700 shadow-md"
-              />
-              <h3 className="text-lg font-bold text-red-500">{internship.company}</h3>
-              <p className="text-sm text-neutral-500 mt-1">{internship.period}</p>
-              <h4 className="text-md font-semibold mt-4 text-red-400">{internship.position}</h4>
-              <p className="text-sm mt-2 text-neutral-400">{internship.description}</p>
-              <button
-                onClick={() => handleOpenModal(internship)}
-                className="mt-4 p-2 bg-white rounded-lg text-black font-medium hover:bg-neutral-300 w-auto"
-              >
-                View Documentation
-              </button>
-            </div>
+            <img
+              src={internship.logo}
+              alt={`${internship.company} Logo`}
+              className="w-10 h-10 absolute top-4 right-4 rounded-full border border-neutral-700 shadow-sm object-cover"
+              loading="lazy"
+            />
+            <h3 className="text-lg sm:text-xl font-bold text-red-500">{internship.company}</h3>
+            <p className="text-xs sm:text-sm text-neutral-500 mt-1">{internship.period}</p>
+            <h4 className="text-sm sm:text-md font-semibold mt-3 text-red-400">
+              {internship.position}
+            </h4>
+            <p className="text-xs sm:text-sm text-neutral-400 mt-2 line-clamp-3">
+              {internship.description}
+            </p>
+            <button
+              onClick={() => handleOpenModal(internship)}
+              className="mt-4 px-4 py-2 bg-white text-black text-sm font-medium rounded-lg hover:bg-neutral-200 transition-colors duration-200"
+              aria-label={`View documentation for ${internship.company}`}
+            >
+              View Documentation
+            </button>
           </div>
         ))}
       </div>
 
+      {/* Modal for Carousel */}
       {selectedInternship && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-60">
-          <div className="bg-neutral-900 p-6 rounded-lg shadow-lg w-11/12 sm:w-1/2 lg:w-1/3">
-            <h3 className="text-lg font-bold text-red-500">{selectedInternship.company}</h3>
-            <h4 className="text-md font-semibold mt-4 text-red-400">{selectedInternship.position}</h4>
-            <div className="mt-4">
-              {Array.isArray(selectedInternship.documentation) && (
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {selectedInternship.documentation.map((doc, index) => (
-                    <img
-                      key={index}
-                      src={doc}
-                      alt={`Internship Documentation ${index + 1}`}
-                      className="w-full h-auto rounded-lg shadow-md hover:shadow-xl"
-                    />
-                  ))}
-                </div>
-              )}
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm px-4"
+          role="dialog"
+          aria-modal="true"
+          onClick={handleCloseModal}
+        >
+          <div
+            className="bg-neutral-900 p-4 sm:p-6 rounded-xl shadow-2xl w-full max-w-md sm:max-w-lg"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h3 className="text-lg sm:text-xl font-bold text-red-500">
+              {selectedInternship.company}
+            </h3>
+            <h4 className="text-sm sm:text-md font-semibold mt-1 text-red-400">
+              {selectedInternship.position}
+            </h4>
+            <div className="mt-4 relative">
+              <img
+                src={selectedInternship.documentation[carouselIndex]}
+                alt={`Documentation ${carouselIndex + 1}`}
+                className="w-full h-48 sm:h-64 object-contain rounded-md shadow-md transition-transform duration-300"
+                loading="lazy"
+              />
+              <div className="absolute top-1/2 -translate-y-1/2 w-full flex justify-between px-2 sm:px-4">
+                <button
+                  onClick={prevSlide}
+                  className="bg-neutral-800/70 text-white p-2 rounded-full hover:bg-neutral-700 transition-colors duration-200"
+                  aria-label="Previous image"
+                >
+                  ◀
+                </button>
+                <button
+                  onClick={nextSlide}
+                  className="bg-neutral-800/70 text-white p-2 rounded-full hover:bg-neutral-700 transition-colors duration-200"
+                  aria-label="Next image"
+                >
+                  ▶
+                </button>
+              </div>
             </div>
             <button
               onClick={handleCloseModal}
-              className="mt-4 text-sm text-white hover:text-gray-300 hover:underline"
+              className="mt-4 text-sm text-white hover:text-gray-300 hover:underline w-full text-center"
+              aria-label="Close modal"
             >
               Close
             </button>
           </div>
         </div>
       )}
-    </div>
+    </section>
   );
 };
 

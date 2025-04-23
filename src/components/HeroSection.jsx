@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
-import profilePhoto from "../assets/julpian.jpg";
-import lj from "../assets/lj.png";
-import jl from "../assets/jl.png";
+import lj from "../assets/lj.jpg";
 import pythonIcon from "../assets/icon/python.png";
 import phpIcon from "../assets/icon/php.png";
 import jsIcon from "../assets/icon/java-script.png";
@@ -20,7 +18,8 @@ import seabornIcon from "../assets/icon/seaborn.png";
 import tailwindIcon from "../assets/icon/tailwind.png";
 import tableauIcon from "../assets/icon/tableau.png";
 
-const HeroSection = () => {
+// Typing Animation Component
+const TypingAnimation = () => {
   const texts = ["Data Science", "Data Analyst", "Data Engineer"];
   const [currentText, setCurrentText] = useState("");
   const [textIndex, setTextIndex] = useState(0);
@@ -28,129 +27,140 @@ const HeroSection = () => {
   const [isTyping, setIsTyping] = useState(true);
 
   useEffect(() => {
-    const typeText = () => {
-      if (charIndex < texts[textIndex].length) {
+    let timeout;
+
+    if (isTyping && charIndex < texts[textIndex].length) {
+      timeout = setTimeout(() => {
         setCurrentText((prev) => prev + texts[textIndex][charIndex]);
-        setCharIndex(charIndex + 1);
-      } else {
+        setCharIndex((prev) => prev + 1);
+      }, 100);
+    } else if (isTyping && charIndex === texts[textIndex].length) {
+      timeout = setTimeout(() => {
         setIsTyping(false);
-        setTimeout(() => {
-          setIsTyping(true);
-          setTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
-          setCharIndex(0);
-          setCurrentText("");
-        }, 1000);
-      }
-    };
+      }, 1500);
+    } else if (!isTyping) {
+      timeout = setTimeout(() => {
+        setTextIndex((prev) => (prev + 1) % texts.length);
+        setCurrentText("");
+        setCharIndex(0);
+        setIsTyping(true);
+      }, 500);
+    }
 
-    const typingInterval = setInterval(typeText, isTyping ? 100 : 0);
-
-    return () => clearInterval(typingInterval);
-  }, [charIndex, textIndex, isTyping]);
+    return () => clearTimeout(timeout);
+  }, [charIndex, isTyping, textIndex, texts]);
 
   return (
-    <div id="Home" className="flex flex-col items-center justify-center lg:mt-20 mt-6 px-6 space-y-8 bg-black text-white">
-      {/* Kontainer Utama dengan Flexbox */}
-      <div className="flex flex-col lg:flex-row items-center justify-between w-full lg:space-x-12">
-        {/* Bagian Penjelasan */}
-        <div className="lg:w-1/2 text-center lg:text-left animate__animated animate__fadeIn animate__delay-2s">
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl tracking-wide mb-10 text-white">
-            Welcome to{" "}
-            <span className="bg-gradient-to-r from-red-600 to-red-800 text-transparent bg-clip-text">
-              Lutfi Julpian's Portfolio
-            </span>
-          </h1>
-          <p className="text-lg text-neutral-400 max-w-2xl mx-auto lg:mx-0">
-            I am Lutfi Julpian, a professional who is very enthusiastic in processing data to create effective and informative visualizations. With expertise in Data Science, Data Analytics, and Data Engineering, I can provide deep insights for smarter decision making.
-          </p>
+    <span className="font-semibold text-red-500" aria-live="polite">
+      {currentText}
+    </span>
+  );
+};
 
-          <p className="text-lg text-neutral-400 mt-4">
-            My expertise is in the field of{" "}
-            <span className="font-bold text-red-600">{currentText}</span>
-          </p>
+// Profile Section Component
+const ProfileSection = () => (
+  <div className="lg:w-1/2 text-center lg:text-left space-y-6">
+    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+      Welcome to{" "}
+      <span className="bg-gradient-to-r from-red-600 to-red-800 text-transparent bg-clip-text">
+        Lutfi Julpian's Portfolio
+      </span>
+    </h1>
+    <p className="text-neutral-400 text-base sm:text-lg max-w-xl mx-auto lg:mx-0">
+      I am Lutfi Julpian, a professional passionate about processing data to create effective and informative visualizations. With expertise in Data Science, Data Analytics, and Data Engineering, I help uncover insights for smarter decisions.
+    </p>
+    <p className="text-neutral-400 text-base sm:text-lg">
+      My expertise is in <TypingAnimation />
+    </p>
+    <div className="mt-6">
+      <a
+        href="https://drive.google.com/file/d/1FY4QXsFr8bsonVyiAIIqZdH4DVexnds2/view?usp=sharing"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block px-6 py-3 bg-gradient-to-r from-red-600 to-red-800 text-white rounded-full font-medium hover:bg-gradient-to-r hover:from-red-700 hover:to-red-900 transition-all duration-300"
+        aria-label="Download Lutfi Julpian's CV"
+      >
+        Download CV
+      </a>
+    </div>
+  </div>
+);
 
-          {/* Tombol Unduh CV */}
-          <div className="mt-6">
-            <a
-              href="https://drive.google.com/file/d/1FY4QXsFr8bsonVyiAIIqZdH4DVexnds2/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-2 bg-red-600 text-white rounded-lg shadow-lg hover:bg-red-700 transition duration-300 text-sm"
-            >
-              CV
-            </a>
-          </div>
-        </div>
+// Profile Image Component
+const ProfileImage = () => (
+  <div className="lg:w-1/2 flex justify-center">
+    <div className="relative rounded-full overflow-hidden shadow-lg hover:scale-105 transition-transform duration-500 border-4 border-red-600/20">
+      <img
+        src={lj}
+        alt="Lutfi Julpian"
+        className="w-64 h-64 sm:w-80 sm:h-80 object-cover"
+        loading="lazy"
+      />
+    </div>
+  </div>
+);
 
-        {/* Bagian Foto Profil */}
-        <div className="lg:w-1/2 flex justify-center animate__animated animate__fadeIn animate__delay-1s">
-          <img
-            src={jl}
-            alt="Lutfi Julpian"
-            className="w-96 h-96 rounded-full object-contain shadow-lg transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-2xl"
-          />
-        </div>
-      </div>
+// Skills Section Component
+const SkillsSection = () => {
+  const skills = [
+    { icon: pythonIcon, name: "Python" },
+    { icon: phpIcon, name: "PHP" },
+    { icon: jsIcon, name: "JavaScript" },
+    { icon: htmlIcon, name: "HTML" },
+    { icon: cssIcon, name: "CSS" },
+    { icon: structureIcon, name: "SQL" },
+    { icon: figmaIcon, name: "Figma" },
+    { icon: numpyIcon, name: "NumPy" },
+    { icon: pandasIcon, name: "Pandas" },
+    { icon: streamlitIcon, name: "Streamlit" },
+    { icon: tensorflowIcon, name: "TensorFlow" },
+    { icon: gitIcon, name: "Git" },
+    { icon: canvaIcon, name: "Canva" },
+    { icon: scikitlearnIcon, name: "Scikit-learn" },
+    { icon: seabornIcon, name: "Seaborn" },
+    { icon: tailwindIcon, name: "Tailwind CSS" },
+    { icon: tableauIcon, name: "Tableau" },
+  ];
 
-      {/* Bagian Keterampilan */}
-      <div className="w-full mt-12 text-center">
-        <h2 className="text-2xl font-semibold text-neutral-700">My Skills</h2>
-        <div className="mt-4 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-6">
-          {/* Ikon Keterampilan */}
-          <div className="flex flex-col items-center transform transition-all duration-300 hover:scale-125 hover:shadow-xl hover:text-red-600">
-            <img src={pythonIcon} alt="Python" className="w-12 h-12 mb-2" />
+  return (
+    <div className="w-full max-w-5xl mt-16 text-center">
+      <h2 className="text-2xl sm:text-3xl font-bold mb-8">My Skills</h2>
+      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-6">
+        {skills.map((skill, idx) => (
+          <div
+            key={idx}
+            className="flex flex-col items-center transition-transform duration-300 hover:scale-110 hover:text-red-600"
+            role="img"
+            aria-label={skill.name}
+          >
+            <img
+              src={skill.icon}
+              alt={skill.name}
+              className="w-10 h-10 sm:w-12 sm:h-12 mb-2"
+              loading="lazy"
+            />
+            <span className="text-xs sm:text-sm text-neutral-300">{skill.name}</span>
           </div>
-          <div className="flex flex-col items-center transform transition-all duration-300 hover:scale-125 hover:shadow-xl">
-            <img src={phpIcon} alt="PHP" className="w-12 h-12 mb-2" />
-          </div>
-          <div className="flex flex-col items-center transform transition-all duration-300 hover:scale-125 hover:shadow-xl">
-            <img src={jsIcon} alt="JavaScript" className="w-12 h-12 mb-2" />
-          </div>
-          <div className="flex flex-col items-center transform transition-all duration-300 hover:scale-125 hover:shadow-xl">
-            <img src={htmlIcon} alt="HTML" className="w-12 h-12 mb-2" />
-          </div>
-          <div className="flex flex-col items-center transform transition-all duration-300 hover:scale-125 hover:shadow-xl">
-            <img src={cssIcon} alt="CSS" className="w-12 h-12 mb-2" />
-          </div>
-          <div className="flex flex-col items-center transform transition-all duration-300 hover:scale-125 hover:shadow-xl">
-            <img src={structureIcon} alt="Structure" className="w-12 h-12 mb-2" />
-          </div>
-          <div className="flex flex-col items-center transform transition-all duration-300 hover:scale-125 hover:shadow-xl">
-            <img src={figmaIcon} alt="Figma" className="w-12 h-12 mb-2" />
-          </div>
-          <div className="flex flex-col items-center transform transition-all duration-300 hover:scale-125 hover:shadow-xl">
-            <img src={numpyIcon} alt="NumPy" className="w-12 h-12 mb-2" />
-          </div>
-          <div className="flex flex-col items-center transform transition-all duration-300 hover:scale-125 hover:shadow-xl">
-            <img src={pandasIcon} alt="Pandas" className="w-12 h-12 mb-2" />
-          </div>
-          <div className="flex flex-col items-center transform transition-all duration-300 hover:scale-125 hover:shadow-xl">
-            <img src={streamlitIcon} alt="Streamlit" className="w-12 h-12 mb-2" />
-          </div>
-          <div className="flex flex-col items-center transform transition-all duration-300 hover:scale-125 hover:shadow-xl">
-            <img src={tensorflowIcon} alt="TensorFlow" className="w-12 h-12 mb-2" />
-          </div>
-          <div className="flex flex-col items-center transform transition-all duration-300 hover:scale-125 hover:shadow-xl">
-            <img src={gitIcon} alt="Git" className="w-12 h-12 mb-2" />
-          </div>
-          <div className="flex flex-col items-center transform transition-all duration-300 hover:scale-125 hover:shadow-xl">
-            <img src={canvaIcon} alt="Canva" className="w-12 h-12 mb-2" />
-          </div>
-          <div className="flex flex-col items-center transform transition-all duration-300 hover:scale-125 hover:shadow-xl">
-            <img src={scikitlearnIcon} alt="Scikit-Learn" className="w-12 h-12 mb-2" />
-          </div>
-          <div className="flex flex-col items-center transform transition-all duration-300 hover:scale-125 hover:shadow-xl">
-            <img src={seabornIcon} alt="Seaborn" className="w-12 h-12 mb-2" />
-          </div>
-          <div className="flex flex-col items-center transform transition-all duration-300 hover:scale-125 hover:shadow-xl">
-            <img src={tailwindIcon} alt="Tailwind" className="w-12 h-12 mb-2" />
-          </div>
-          <div className="flex flex-col items-center transform transition-all duration-300 hover:scale-125 hover:shadow-xl">
-            <img src={tableauIcon} alt="Tableau" className="w-12 h-12 mb-2" />
-          </div>
-        </div>
+        ))}
       </div>
     </div>
+  );
+};
+
+const HeroSection = () => {
+  return (
+    <section
+      id="home"
+      className="bg-black text-white py-12 sm:py-16 lg:py-24"
+    >
+      <div className="container mx-auto px-4 sm:px-6 flex flex-col items-center">
+        <div className="flex flex-col lg:flex-row items-center justify-between w-full max-w-6xl gap-12 lg:gap-16">
+          <ProfileSection />
+          <ProfileImage />
+        </div>
+        <SkillsSection />
+      </div>
+    </section>
   );
 };
 

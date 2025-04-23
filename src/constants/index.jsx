@@ -35,28 +35,28 @@ export const certifications = [
     image: ds,
     title: "Associate Data Science",
     provider: "BNSP",
-    description: "Sertifikasi ini mengakui kompetensi dalam Data Science, mencakup analisis data, pemrograman, dan penerapan algoritma untuk menyelesaikan masalah. Diperoleh melalui pelatihan BNSP.",
+    description: "BNSP Data Science certification: analysis, coding, and practical algorithmic solutions.",
     link: "https://drive.google.com/file/d/1kxhIQ6BnoxCbqLfLnC_Rf4QiKax7H9In/view?usp=drive_link",
   },
   {
     image: ts,
     title: "Sertifikat Studi Independen Bersertifikat", 
     provider: "MSIB Angkatan 6",
-    description: "Telah berhasil menyelesaikan tugas belajarnya bersama PT. GreatEdu Global Mahardika pada program Studi Independen Bersertifikat Angkatan 6 bertema Greenceleration dengan kegiatan Data Science Bootcamp.",
+    description: "Completed Batch 6 Independent Study, GreatEdu Greenceleration Data Science Bootcamp.",
     link: "https://drive.google.com/file/d/1WmjxDgNcJ80lgYfKGyNZvawUm999NUQu/view?usp=drive_link",
   },
   {
     image: kn,
     title: "KNIME Advanced Analytics",
     provider: "KNIME Academy",
-    description: "Wawasan mendalam tentang analitik menggunakan perangkat lunak KNIME.",
+    description: "Learning in-depth data analytics using KNIME software in a practical way.",
     link: "https://drive.google.com/file/d/1NLMBLN6YiPwxB5plcRscDZ56uqVg67PE/view?usp=drive_link",
   },
   {
     image: ic,
     title: "ICONIC AI Certification",
     provider: "Universitas Siliwangi",
-    description: "Sertifikat ini diperoleh setelah mengikuti lomba Data Science sebagai peserta, yang diselenggarakan untuk menguji keterampilan dalam analisis data, pemodelan prediktif, serta penerapan teknik-teknik machine learning.",
+    description: "This certificate was obtained from the Data Science competition, testing analytical skills.",
     link: "https://drive.google.com/file/d/1vKU8fuRs8419-wuYF1-GxjkjZirRb0mV/view?usp=drive_link",
   },
   {
@@ -135,28 +135,28 @@ export const projects = [
   {
     title: "Water Quality Prediction",
     description:
-      "Sebuah proyek berbasis AI untuk memprediksi kualitas air menggunakan algoritme pembelajaran mesin, yang dikerjakan saat mengikuti program Kampus Merdeka MSIB batch 6 bersama GreatEdu.",
+      "Water quality prediction with AI, MSIB batch 6 project with GreatEdu.",
     link: "https://funtasticfour-water-prediction-app.streamlit.app/",
     image: fun
   },
   {
     title: "Brilium",
     description:
-      "Proyek ini menggunakan machine learning klasifikasi untuk mengembangkan sistem rekomendasi pembelajaran yang dipersonalisasi bagi mahasiswa, berdasarkan data akademik mereka. Proyek ini dibuat sebagai bagian dari lomba Data Science pada event ICNONIC IT.",
+      "ML-based learning recommendation system for the ICONIC IT competition.",
     link: "https://github.com/Julpian/IconicIT",
     image: ico
   },
   {
     title: "Java Quake",
     description:
-      "JavaQuake adalah proyek clustering yang mengklasifikasikan gempa bumi di Pulau Jawa. Proyek ini dibuat selama pelatihan dan kompetisi yang diselenggarakan oleh KOMINFO.",
+      "JavaQuake: Classification of Java earthquakes via clustering, KOMINFO project.",
     link: "https://maetalascientist-javaquake.streamlit.app/",
     image: jav
   },
   {
     title: "AppleSense",
     description:
-      "Proyek ini merupakan aplikasi visi komputer yang dirancang untuk mendeteksi dan menghitung jumlah apel di lingkungan pertanian. Menggunakan model YOLO (You Only Look Once), sistem ini dapat menganalisis video dari kamera yang dipasang di atas conveyor untuk mendeteksi objek (apel) secara otomatis, menghitung jumlah apel yang terdeteksi, dan menampilkan hasilnya di halaman web yang interaktif.",
+      "Automatic detection and counting of apples with YOLO on the farm",
     link: "https://github.com/Julpian/AppleSense",
     image: app
   },
