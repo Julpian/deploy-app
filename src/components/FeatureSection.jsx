@@ -15,7 +15,7 @@ import pen1 from "../assets/intership/pendidikan1.jpg";
 import pen2 from "../assets/intership/pendidikan2.jpg";
 import doc1 from "../assets/intership/doc1.png";
 import doc2 from "../assets/intership/doc2.jpg";
-import doc3 from "../assets/intership/doc3.jpg";
+
 import briLogo from "../assets/bri.png";
 import kknLogo from "../assets/kkn.png";
 import greatEduLogo from "../assets/greatedu.png";
@@ -47,7 +47,7 @@ const internships = [
     period: "Dec 2023 - Nov 2024",
     description:
       "Overseeing three divisions, leading national events, ensuring impactful and student-focused programs.",
-    documentation: [doc1, doc2, doc3],
+    documentation: [doc1, doc2],
     logo: hmif,
   },
   {
