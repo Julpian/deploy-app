@@ -52,7 +52,7 @@ const SocialLinks = () => {
 // Komponen Copyright
 const Copyright = () => (
   <p className="text-neutral-400 text-xs sm:text-sm">
-    © {new Date().getFullYear()} Lutfi Julpian. Hak cipta dilindungi.
+    © {new Date().getFullYear()} Lutfi Julpian. All rights reserved.
   </p>
 );
 

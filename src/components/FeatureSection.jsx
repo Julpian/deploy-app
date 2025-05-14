@@ -12,6 +12,10 @@ import ge2 from "../assets/intership/ge2.png";
 import ge3 from "../assets/intership/ge3.png";
 import pen from "../assets/intership/pendidikan.jpg";
 import pen1 from "../assets/intership/pendidikan1.jpg";
+import pen2 from "../assets/intership/pendidikan2.jpg";
+import doc1 from "../assets/intership/doc1.png";
+import doc2 from "../assets/intership/doc2.jpg";
+import doc3 from "../assets/intership/doc3.jpg";
 import briLogo from "../assets/bri.png";
 import kknLogo from "../assets/kkn.png";
 import greatEduLogo from "../assets/greatedu.png";
@@ -25,7 +29,7 @@ const internships = [
     period: "Dec 2022 - Nov 2023",
     description:
       "Facilitated student development in skills and insights, collaborated with educational institutions, and supported competitions, delegations, and scientific discussions in Informatics.",
-    documentation: [pen, pen1],
+    documentation: [pen, pen1, pen2],
     logo: hmif,
   },
   {
@@ -36,6 +40,15 @@ const internships = [
       "Managed loan-related documents, ensuring proper storage and administration of proofs and ongoing loans.",
     documentation: [bri, bri1],
     logo: briLogo,
+  },
+  {
+    company: "Himpunan Mahasiswa Informatika (HMIF) Siliwangi University",
+    position: "Head of Department of Education",
+    period: "Dec 2023 - Nov 2024",
+    description:
+      "Overseeing three divisions, leading national events, ensuring impactful and student-focused programs.",
+    documentation: [doc1, doc2, doc3],
+    logo: hmif,
   },
   {
     company: "Kuliah Kerja Nyata (KKN) Margacinta Village",

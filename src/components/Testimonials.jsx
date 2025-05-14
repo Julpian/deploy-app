@@ -41,7 +41,7 @@ const CertificationCard = ({ certification, index }) => (
         className="mt-4 inline-block bg-gradient-to-r from-red-600 to-red-800 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-gradient-to-r hover:from-red-700 hover:to-red-900 transition-all duration-300"
         aria-label={`Lihat detail sertifikasi ${certification.title}`}
       >
-        Lihat Detail
+        see details
       </a>
     </div>
   </div>

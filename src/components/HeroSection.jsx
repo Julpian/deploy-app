@@ -1,22 +1,43 @@
 import React, { useState, useEffect } from "react";
+
+// Foto Profil
 import lj from "../assets/lj.jpg";
+import julius from "../assets/julius.jpg";
+import julpian from "../assets/julpian.jpg";
+
+// Import Icon
+// Bahasa Pemrograman dan IDE
 import pythonIcon from "../assets/icon/python.png";
+import colabIcon from "../assets/icon/GoogleColab.png";
+import VScodeIcon from "../assets/icon/VScode.png";
+// Analisisi dan Visualisasi Data
+import lookerIcon from "../assets/icon/GoogleLooker.png";
+import matplotIcon from "../assets/icon/Matplotlib.png";
+import numpyIcon from "../assets/icon/numpy.png";
+import pandasIcon from "../assets/icon/pandas.png";
+import streamlitIcon from "../assets/icon/streamlit.png";
+import seabornIcon from "../assets/icon/seaborn.png";
+import tableauIcon from "../assets/icon/tableau.png";
+import flask from "../assets/icon/flask.png";
+//Machine Learning
+import scikitlearnIcon from "../assets/icon/scikit-learn.png";
+import tensorflowIcon from "../assets/icon/tensorflow.png";
+import yoloIcon from "../assets/icon/yolo.png";
+// Desain dan Pengembangan Web
 import phpIcon from "../assets/icon/php.png";
 import jsIcon from "../assets/icon/java-script.png";
 import htmlIcon from "../assets/icon/html.png";
 import structureIcon from "../assets/icon/structure.png";
 import cssIcon from "../assets/icon/css-3.png";
+import androidIcon from "../assets/icon/AndroidStudio.png";
+// Desain Grafis
 import figmaIcon from "../assets/icon/figma.png";
-import gitIcon from "../assets/icon/git.png";
-import numpyIcon from "../assets/icon/numpy.png";
-import pandasIcon from "../assets/icon/pandas.png";
-import streamlitIcon from "../assets/icon/streamlit.png";
-import tensorflowIcon from "../assets/icon/tensorflow.png";
 import canvaIcon from "../assets/icon/canva.png";
-import scikitlearnIcon from "../assets/icon/scikit-learn.png";
-import seabornIcon from "../assets/icon/seaborn.png";
 import tailwindIcon from "../assets/icon/tailwind.png";
-import tableauIcon from "../assets/icon/tableau.png";
+// Version Control
+import gitIcon from "../assets/icon/git.png";
+
+
 
 // Typing Animation Component
 const TypingAnimation = () => {
@@ -91,7 +112,7 @@ const ProfileImage = () => (
   <div className="lg:w-1/2 flex justify-center">
     <div className="relative rounded-full overflow-hidden shadow-lg hover:scale-105 transition-transform duration-500 border-4 border-red-600/20">
       <img
-        src={lj}
+        src={julpian}
         alt="Lutfi Julpian"
         className="w-64 h-64 sm:w-80 sm:h-80 object-cover"
         loading="lazy"
@@ -103,23 +124,35 @@ const ProfileImage = () => (
 // Skills Section Component
 const SkillsSection = () => {
   const skills = [
+    // bahasa pemrograman dan IDE
     { icon: pythonIcon, name: "Python" },
+    { icon: VScodeIcon, name: "VS Code" },
+    { icon: colabIcon, name: "Google Colab" },
+    // Analisisi dan Visualisasi Data
+    { icon: numpyIcon, name: "NumPy" },
+    { icon: pandasIcon, name: "Pandas" },
+    { icon: seabornIcon, name: "Seaborn" },
+    { icon: matplotIcon, name: "Matplotlib" },
+    { icon: lookerIcon, name: "Google Looker" },
+    { icon: tableauIcon, name: "Tableau" },
+    { icon: streamlitIcon, name: "Streamlit" },
+    { icon: androidIcon, name: "Android Studio" },
+    { icon: flask, name: "Flask" },
+    // Machine Learning
+    { icon: scikitlearnIcon, name: "Scikit-learn" },
+    { icon: tensorflowIcon, name: "TensorFlow" },
+    { icon: yoloIcon, name: "YOLO" },
+    // Desain dan Pengembangan Web
     { icon: phpIcon, name: "PHP" },
     { icon: jsIcon, name: "JavaScript" },
     { icon: htmlIcon, name: "HTML" },
     { icon: cssIcon, name: "CSS" },
     { icon: structureIcon, name: "SQL" },
     { icon: figmaIcon, name: "Figma" },
-    { icon: numpyIcon, name: "NumPy" },
-    { icon: pandasIcon, name: "Pandas" },
-    { icon: streamlitIcon, name: "Streamlit" },
-    { icon: tensorflowIcon, name: "TensorFlow" },
-    { icon: gitIcon, name: "Git" },
     { icon: canvaIcon, name: "Canva" },
-    { icon: scikitlearnIcon, name: "Scikit-learn" },
-    { icon: seabornIcon, name: "Seaborn" },
     { icon: tailwindIcon, name: "Tailwind CSS" },
-    { icon: tableauIcon, name: "Tableau" },
+    // Version Control
+    { icon: gitIcon, name: "Git" },
   ];
 
   return (
