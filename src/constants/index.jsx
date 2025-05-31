@@ -22,6 +22,7 @@ import fun from "../assets/project/funtastic.png";
 import ico from "../assets/project/iconicit.png";
 import jav from "../assets/project/java.png";
 import app from "../assets/project/Apple.png";
+import fuelapp from "../assets/project/fuelapp.png";
 
 export const navItems = [
   { label: "Home", href: "#Home" },
@@ -159,6 +160,13 @@ export const projects = [
       "Automatic detection and counting of apples with YOLO on the farm",
     link: "https://github.com/Julpian/AppleSense",
     image: app
+  },
+  {
+    title: "Fuel Entry App",
+    description:
+      "Web application for recording fuel consumption of truck units and heavy equipment at PT. Kalimantan Prima Persada",
+    link: "https://fuel-app-hq8u-501l96vtz-julpians-projects.vercel.app/login",
+    image: fuelapp
   },
 ];
 

@@ -128,8 +128,8 @@ const ExperienceSection = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 sm:mt-16">
         {internships.map((internship, index) => (
           <div
-            key={index}
-            className="bg-neutral-900 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 relative group"
+          key={index}
+          className="bg-neutral-900 rounded-xl shadow-lg hover:shadow-2xl transform transition duration-300 hover:scale-105 active:scale-95 p-6 relative group cursor-pointer"
           >
             <img
               src={internship.logo}
