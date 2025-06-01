@@ -165,7 +165,7 @@ export const projects = [
     title: "Fuel Entry App",
     description:
       "Web application for recording fuel consumption of truck units and heavy equipment at PT. Kalimantan Prima Persada",
-    link: "https://fuel-app-hq8u-501l96vtz-julpians-projects.vercel.app/login",
+    link: "https://fuel-app-pi.vercel.app/login",
     image: fuelapp
   },
 ];
