@@ -15,7 +15,12 @@ import pen1 from "../assets/intership/pendidikan1.jpg";
 import pen2 from "../assets/intership/pendidikan2.jpg";
 import doc1 from "../assets/intership/doc1.png";
 import doc2 from "../assets/intership/doc2.jpg";
+import IT1 from "../assets/intership/IT1.jpg"; // <-- ubah ke .jpg
+import IT2 from "../assets/intership/IT2.jpg"; // <-- ubah ke .jpg
+import IT3 from "../assets/intership/IT3.jpg"; // <-- ubah ke .jpg
 
+
+import IT4 from "../assets/itbootcamp.jpg"; // <-- ubah ke .jpg
 import briLogo from "../assets/bri.png";
 import kknLogo from "../assets/kkn.png";
 import greatEduLogo from "../assets/greatedu.png";
@@ -76,6 +81,15 @@ const internships = [
       "Created survey forms, processed Excel data for clarity, and performed rice price predictions.",
     documentation: [bps, bps1, bps2],
     logo: bpsLogo,
+  },
+  {
+    company: "IT BOOTCAMP HMIF UNSIL",
+    position: "Data Science Mentor",
+    period: "Mei 2025 - Jun 2025",
+    description:
+      "For a week, students are guided to understand the fundamentals of Data Science, build simple AI models, and implement them into an appealing and functional visual interface. This program emphasizes the hands-on application of AI solutions.",
+    documentation: [IT1, IT2, IT3],
+    logo: IT4,
   },
 ];
 

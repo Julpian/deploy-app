@@ -1,8 +1,5 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
-// Foto Profil
-import lj from "../assets/lj.jpg";
-import julius from "../assets/julius.jpg";
 import julpian from "../assets/julpian.jpg";
 
 // Import Icon

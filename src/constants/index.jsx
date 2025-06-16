@@ -23,6 +23,7 @@ import ico from "../assets/project/iconicit.png";
 import jav from "../assets/project/java.png";
 import app from "../assets/project/Apple.png";
 import fuelapp from "../assets/project/fuelapp.png";
+import kas from "../assets/project/kas.png";
 
 export const navItems = [
   { label: "Home", href: "#Home" },
@@ -167,6 +168,13 @@ export const projects = [
       "Web application for recording fuel consumption of truck units and heavy equipment at PT. Kalimantan Prima Persada",
     link: "https://fuel-app-pi.vercel.app/login",
     image: fuelapp
+  },
+  {
+    title: "FinTrack",
+    description:
+      "This application helps you track every income and expense, organize your monthly budget, and monitor your savings and investments all in one intuitive and easy-to-use dashboard.",
+    link: "https://fintrack-kappa-ten.vercel.app/",
+    image: kas
   },
 ];
 
