@@ -5,13 +5,6 @@ import { ShieldHalf } from "lucide-react";
 import { PlugZap } from "lucide-react";
 import { GlobeLock } from "lucide-react";
 
-import user1 from "../assets/profile-pictures/user1.jpg";
-import user2 from "../assets/profile-pictures/user2.jpg";
-import user3 from "../assets/profile-pictures/user3.jpg";
-import user4 from "../assets/profile-pictures/user4.jpg";
-import user5 from "../assets/profile-pictures/user5.jpg";
-import user6 from "../assets/profile-pictures/user6.jpg";
-
 import ds from "../assets/sertifikat/datascince.png";
 import ic from "../assets/sertifikat/iconic.png";
 import kn from "../assets/sertifikat/KNIME.png";
@@ -24,6 +17,7 @@ import jav from "../assets/project/java.png";
 import app from "../assets/project/Apple.png";
 import fuelapp from "../assets/project/fuelapp.png";
 import kas from "../assets/project/kas.png";
+import heart from "../assets/project/hear.png";
 
 export const navItems = [
   { label: "Home", href: "#Home" },
@@ -175,6 +169,13 @@ export const projects = [
       "This application helps you track every income and expense, organize your monthly budget, and monitor your savings and investments all in one intuitive and easy-to-use dashboard.",
     link: "https://fintrack-kappa-ten.vercel.app/",
     image: kas
+  },
+  {
+    title: "Prediction of Heart Disease",
+    description:
+      "🫀 Early Prediction, Save Lives — My thesis project for AI-based heart disease risk detection.",
+    link: "https://fintrack-kappa-ten.vercel.app/",
+    image: heart
   },
 ];
 
