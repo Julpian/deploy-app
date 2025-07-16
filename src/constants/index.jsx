@@ -133,49 +133,56 @@ export const projects = [
     description:
       "Water quality prediction with AI, MSIB batch 6 project with GreatEdu.",
     link: "https://funtasticfour-water-prediction-app.streamlit.app/",
-    image: fun
+    image: fun,
+    category: "Data Science",
   },
   {
     title: "Brilium",
     description:
       "ML-based learning recommendation system for the ICONIC IT competition.",
     link: "https://github.com/Julpian/IconicIT",
-    image: ico
+    image: ico,
+    category: "Data Science",
   },
   {
     title: "Java Quake",
     description:
       "JavaQuake: Classification of Java earthquakes via clustering, KOMINFO project.",
     link: "https://maetalascientist-javaquake.streamlit.app/",
-    image: jav
+    image: jav,
+    category: "Data Science",
   },
   {
     title: "AppleSense",
     description:
       "Automatic detection and counting of apples with YOLO on the farm",
     link: "https://github.com/Julpian/AppleSense",
-    image: app
+    image: app,
+    category: "Data Science",
   },
   {
     title: "Fuel Entry App",
     description:
       "Web application for recording fuel consumption of truck units and heavy equipment at PT. Kalimantan Prima Persada",
     link: "https://fuel-app-pi.vercel.app/login",
-    image: fuelapp
+    image: fuelapp,
+    category: "Software Development",
   },
   {
     title: "FinTrack",
     description:
       "This application helps you track every income and expense, organize your monthly budget, and monitor your savings and investments all in one intuitive and easy-to-use dashboard.",
     link: "https://fintrack-kappa-ten.vercel.app/",
-    image: kas
+    image: kas,
+    category: "Software Development",
   },
   {
     title: "Prediction of Heart Disease",
     description:
       "🫀 Early Prediction, Save Lives — My thesis project for AI-based heart disease risk detection.",
     link: "https://fintrack-kappa-ten.vercel.app/",
-    image: heart
+    image: heart,
+    category: "Data Science",
   },
 ];
 

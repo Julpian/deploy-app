@@ -9,11 +9,13 @@ const DesktopNav = () => (
       <li key={index}>
         <a
           href={item.href}
-          className="relative text-neutral-300 hover:text-red-600 transition-colors duration-300 group"
+          // Diubah: Hover text merah menjadi biru
+          className="relative text-neutral-300 hover:text-blue-500 transition-colors duration-300 group"
           aria-label={`Navigasi ke ${item.label}`}
         >
           {item.label}
-          <span className="absolute left-0 bottom-[-4px] w-0 h-[2px] bg-red-600 transition-all duration-300 group-hover:w-full" />
+          {/* Diubah: Background underline merah menjadi biru */}
+          <span className="absolute left-0 bottom-[-4px] w-0 h-[2px] bg-blue-500 transition-all duration-300 group-hover:w-full" />
         </a>
       </li>
     ))}
@@ -29,7 +31,8 @@ const MobileNav = ({ isOpen, toggleNavbar }) => (
   >
     <button
       onClick={toggleNavbar}
-      className="absolute top-4 right-4 text-neutral-300 hover:text-red-600"
+      // Diubah: Hover text merah menjadi biru
+      className="absolute top-4 right-4 text-neutral-300 hover:text-blue-500"
       aria-label="Tutup menu navigasi"
     >
       <X size={24} />
@@ -40,7 +43,8 @@ const MobileNav = ({ isOpen, toggleNavbar }) => (
           <a
             href={item.href}
             onClick={toggleNavbar}
-            className="text-xl text-neutral-300 hover:text-red-600 transition-colors duration-300"
+            // Diubah: Hover text merah menjadi biru
+            className="text-xl text-neutral-300 hover:text-blue-500 transition-colors duration-300"
             aria-label={`Navigasi ke ${item.label}`}
           >
             {item.label}
@@ -82,7 +86,8 @@ const Navbar = () => {
         <DesktopNav />
         <button
           onClick={toggleNavbar}
-          className="lg:hidden text-neutral-300 hover:text-red-600"
+          // Diubah: Hover text merah menjadi biru
+          className="lg:hidden text-neutral-300 hover:text-blue-500"
           aria-label="Buka menu navigasi"
         >
           <Menu size={24} />

@@ -34,11 +34,12 @@ const CertificationCard = ({ certification, index }) => (
       <p className="text-sm text-neutral-300 line-clamp-3">
         {certification.description}
       </p>
+      {/* Diubah: Tombol gradien merah menjadi biru */}
       <a
         href={certification.link}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-4 inline-block bg-gradient-to-r from-red-600 to-red-800 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-gradient-to-r hover:from-red-700 hover:to-red-900 transition-all duration-300"
+        className="mt-4 inline-block bg-gradient-to-r from-blue-600 to-blue-800 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-gradient-to-r hover:from-blue-700 hover:to-blue-900 transition-all duration-300"
         aria-label={`Lihat detail sertifikasi ${certification.title}`}
       >
         see details

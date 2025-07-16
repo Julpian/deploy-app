@@ -25,7 +25,7 @@ const SocialLinks = () => {
     },
     {
       name: "Email",
-      href: "lutfijulpian@gmail.com",
+      href: "mailto:lutfijulpian@gmail.com", // Disarankan menggunakan mailto: untuk email
       icon: <FaEnvelope className="w-5 h-5" />,
     },
   ];
@@ -38,7 +38,8 @@ const SocialLinks = () => {
           href={social.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 text-neutral-300 hover:text-red-600 transition-colors duration-300"
+          // Diubah: Hover text merah menjadi biru
+          className="flex items-center gap-2 text-neutral-300 hover:text-blue-500 transition-colors duration-300"
           aria-label={`Kunjungi profil ${social.name} Lutfi Julpian`}
         >
           {social.icon}
