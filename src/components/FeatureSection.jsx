@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import bgImage from '../assets/ps.jpg';
+
 // ... (semua import gambar Anda tetap sama)
 import bri from "../assets/intership/bri.jpg";
 import bri1 from "../assets/intership/bri1.jpg";
@@ -58,17 +60,31 @@ const ExperienceSection = () => {
   };
 
   return (
-    <section id="experience" className="bg-black text-white relative py-16 sm:py-20 px-4">
+    <section 
+      id="experience" 
+      className="relative text-white py-16 sm:py-20 px-4">
+      {/* DIV BACKGROUND GAMBAR */}
+      <div className="absolute inset-0 -z-20 bg-cover bg-center bg-fixed"
+              // 2. Gunakan variabel 'bgImage' di sini dengan template literal (backticks ``)
+      style={{ backgroundImage: `url(${bgImage})` }}></div>
+      {/* Lapisan Overlay Gelap untuk Keterbacaan Teks */}
+      <div className="absolute inset-0 -z-10 bg-black/50"></div>
+
+      {/* ==== DIV GRADASI BARU ==== */}
+      {/* Gradien untuk transisi halus di bagian ATAS */}
+      <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-black to-transparent"></div>
+      {/* Gradien untuk transisi halus di bagian BAWAH */}
+      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-black to-transparent"></div>
+
+
       <div className="container mx-auto">
         {/* Header Section */}
         <div className="text-center mb-16">
-          {/* DIUBAH: Gradien disesuaikan dengan tema merah-biru */}
           <span className="inline-block bg-gradient-to-r from-red-600 to-blue-600 text-white rounded-full text-xs sm:text-sm font-medium px-4 py-1 uppercase">
             My Experience
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl mt-6 font-bold tracking-tight text-white">
             My Professional{" "}
-            {/* DIUBAH: Gradien disesuaikan dengan tema merah-biru */}
             <span className="bg-gradient-to-r from-red-600 to-blue-600 text-transparent bg-clip-text">
               Journey
             </span>
@@ -92,18 +108,15 @@ const ExperienceSection = () => {
 
             return (
               <div key={index} className="relative mb-12">
-                {/* DIUBAH: Titik timeline memiliki warna selang-seling */}
                 <div className={`absolute left-1/2 top-4 -translate-x-1/2 w-10 h-10 bg-neutral-900 rounded-full flex items-center justify-center border-2 ${timelineDotColor} hidden lg:flex`}>
                   <img src={internship.logo} alt={`${internship.company} logo`} className="w-8 h-8 rounded-full object-cover"/>
                 </div>
 
-                {/* DIUBAH: Kartu memiliki efek hover & alignment sesuai posisi */}
                 <div className={`lg:w-1/2 p-6 rounded-xl bg-neutral-900 border border-neutral-800 shadow-lg transition-all duration-300 ${cardAlignment} ${cardHoverEffect}`}>
                   
                   <div className="flex items-center gap-4 mb-3 lg:hidden">
                     <img src={internship.logo} alt="" className="w-10 h-10 rounded-full object-cover border-2 border-neutral-700"/>
                     <div>
-                      {/* DIUBAH: Warna nama perusahaan selang-seling */}
                       <h3 className={`text-lg sm:text-xl font-bold ${companyColor}`}>{internship.company}</h3>
                       <p className="text-xs sm:text-sm text-neutral-500">{internship.period}</p>
                     </div>
@@ -120,7 +133,6 @@ const ExperienceSection = () => {
                   <p className="text-sm text-neutral-400 mt-2">
                     {internship.description}
                   </p>
-                  {/* DIUBAH: Tombol menggunakan gradien merah-biru yang konsisten */}
                   <button
                     onClick={() => handleOpenModal(internship)}
                     className="mt-4 px-4 py-2 bg-gradient-to-r from-red-600 to-blue-600 text-white text-sm font-medium rounded-lg hover:from-red-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
@@ -135,11 +147,10 @@ const ExperienceSection = () => {
         </div>
       </div>
 
-      {/* Modal for Carousel - Diperbarui untuk sentuhan premium */}
+      {/* Modal for Carousel */}
       {selectedInternship && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm px-4" role="dialog" aria-modal="true" onClick={handleCloseModal}>
           <div className="bg-neutral-900 p-4 sm:p-6 rounded-xl shadow-2xl w-full max-w-md sm:max-w-lg border border-neutral-700" onClick={(e) => e.stopPropagation()}>
-            {/* DIUBAH: Judul modal menggunakan gradien untuk tampilan premium */}
             <h3 className="text-lg sm:text-xl font-bold bg-gradient-to-r from-red-600 to-blue-600 text-transparent bg-clip-text">
               {selectedInternship.company}
             </h3>

@@ -1,15 +1,15 @@
 import { useState } from "react";
 import { projects } from "../constants"; // Pastikan path ini benar
 import { motion, AnimatePresence } from "framer-motion";
+import bgImage from '../assets/spi.jpg'; // DITAMBAHKAN: Path ke gambar background Anda
 
-// -- Komponen Tombol Filter dengan tema Spider-Man --
+// -- Komponen Tombol Filter --
 const FilterButtons = ({ categories, activeFilter, setActiveFilter }) => (
   <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-12">
     {categories.map((category) => (
       <button
         key={category}
         onClick={() => setActiveFilter(category)}
-        // DIUBAH: Tombol aktif sekarang menggunakan gradien merah-biru
         className={`px-4 py-2 text-sm sm:text-base font-medium rounded-full transition-all duration-300 transform hover:scale-105
           ${
             activeFilter === category
@@ -24,16 +24,14 @@ const FilterButtons = ({ categories, activeFilter, setActiveFilter }) => (
   </div>
 );
 
-// -- Komponen Header dengan tema Spider-Man --
+// -- Komponen Header --
 const SectionHeader = () => (
   <div className="text-center space-y-3">
-    {/* DIUBAH: Gradien badge disesuaikan */}
     <span className="inline-block bg-gradient-to-r from-red-600 to-blue-600 text-white rounded-full text-sm font-medium px-3 py-1 uppercase tracking-wide">
       My Projects
     </span>
     <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight">
       Explore{" "}
-      {/* DIUBAH: Gradien teks judul disesuaikan */}
       <span className="bg-gradient-to-r from-red-600 to-blue-600 text-transparent bg-clip-text">
         My Work
       </span>
@@ -44,7 +42,7 @@ const SectionHeader = () => (
   </div>
 );
 
-// -- Komponen Kartu Proyek dengan tema Spider-Man --
+// -- Komponen Kartu Proyek --
 const ProjectCard = ({ project }) => (
   <motion.div
     layout
@@ -52,7 +50,6 @@ const ProjectCard = ({ project }) => (
     animate={{ opacity: 1, scale: 1 }}
     exit={{ opacity: 0, scale: 0.8 }}
     transition={{ duration: 0.4 }}
-    // DIUBAH: Efek hover diubah menjadi merah untuk kontras
     className="bg-neutral-900 p-5 rounded-xl shadow-lg border border-neutral-800 transition-all duration-300 hover:border-red-600/30 hover:shadow-red-600/10 group"
     role="article"
   >
@@ -62,12 +59,10 @@ const ProjectCard = ({ project }) => (
       className="w-full h-40 sm:h-48 object-cover rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105"
       loading="lazy"
     />
-    {/* DIUBAH: Judul tetap biru saat hover untuk kombinasi merah-biru */}
     <h3 className="text-xl sm:text-2xl font-semibold mb-2 text-white group-hover:text-blue-500 transition-colors duration-200">
       {project.title}
     </h3>
     <p className="text-sm text-neutral-400 mb-1">
-      {/* DIUBAH: Teks kategori diubah menjadi merah untuk keseimbangan */}
       Category: <span className="font-semibold text-red-400/90">{project.category}</span>
     </p>
     <p className="text-neutral-300 text-sm sm:text-base mt-2 mb-4 line-clamp-3">
@@ -77,7 +72,6 @@ const ProjectCard = ({ project }) => (
       href={project.link}
       target="_blank"
       rel="noopener noreferrer"
-      // DIUBAH: Tombol utama menggunakan gradien merah-biru yang konsisten
       className="block w-full text-center px-4 py-2 bg-gradient-to-r from-red-600 to-blue-600 text-white rounded-lg font-medium hover:from-red-700 hover:to-blue-700 transition-all duration-300"
       aria-label={`View ${project.title} project`}
     >
@@ -95,8 +89,20 @@ const Projects = () => {
       : projects.filter((project) => project.category === activeFilter);
 
   return (
-    <section id="projects" className="relative bg-black text-white py-16 sm:py-20">
-      <div className="container mx-auto px-4 sm:px-6">
+    // DIUBAH: Dihapus bg-black dari sini
+    <section id="projects" className="relative text-white py-16 sm:py-20">
+      
+      {/* DITAMBAHKAN: Latar belakang, overlay, dan gradien */}
+      <div
+        className="absolute inset-0 -z-20 bg-cover bg-center bg-fixed"
+        style={{ backgroundImage: `url(${bgImage})` }}
+      ></div>
+      <div className="absolute inset-0 -z-10 bg-black/60"></div>
+      <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-black to-transparent"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-black to-transparent"></div>
+
+      {/* DIUBAH: Ditambahkan relative z-10 agar konten di atas background */}
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <SectionHeader />
         
         <FilterButtons
