@@ -18,6 +18,7 @@ import app from "../assets/project/Apple.png";
 import fuelapp from "../assets/project/fuelapp.png";
 import kas from "../assets/project/kas.png";
 import heart from "../assets/project/hear.png";
+import look from "../assets/project/superstore.png";
 
 export const navItems = [
   { label: "Home", href: "#Home" },
@@ -180,9 +181,18 @@ export const projects = [
     title: "Prediction of Heart Disease",
     description:
       "🫀 Early Prediction, Save Lives — My thesis project for AI-based heart disease risk detection.",
-    link: "https://fintrack-kappa-ten.vercel.app/",
+    link: "https://heartdisease-tugasakhir.streamlit.app/",
     image: heart,
     category: "Data Science",
+  },
+  {
+    title: "Supestore Dashboard",
+    description:
+      "Superstore sales dashboard, my first project to learn and practice data analysis.",
+    link: "https://lookerstudio.google.com/reporting/63043862-74d0-4648-9ef2-8423ae8614d5",
+    image: look,
+    category: "Data Anlaysis",
+    
   },
 ];
 

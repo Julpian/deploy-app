@@ -154,7 +154,9 @@ const HeroSection = () => {
     <section id="home" className="relative text-white py-12 sm:py-16 lg:py-24 overflow-hidden">
       <div
         className="absolute inset-0 z-[-2] bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${bgImage})` }}
+        style={{
+          backgroundImage: `url('https://github.com/Julpian/Julpian/raw/main/spider.gif')`
+        }}
       ></div>
       <div className="absolute inset-0 z-[-1] bg-black/70"></div>
       <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black to-transparent z-0"></div>
